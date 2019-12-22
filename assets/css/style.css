@@ -266,19 +266,22 @@ footer p {
     position: fixed;
     top: 0;
   }
+  /*Adjusted padding on the h1 because at certian sizes before 640px my first and last name would stack and its was very noticable*/
+  header .container #navbar h1 {
+    padding: 20px 19px;
+  }
+
   /*L/R margin for Nav */
   header .container {
     margin: 0 40px;
   }
 
-  /* Slimmed content and added margins for scrolling */
+  /* Adjusted showcase containers to fit the new sizing and to be somewhat responsive */
   #about-section,
   #contact-section,
   #portfolio-section {
-    width: 680px;
-    margin-left: 42px;
-    margin-bottom: 150px;
-    margin-top: 110px;
+    margin: 110px auto 100px auto;
+    width: 92%;
   }
 
   /* About Me img is slightly larger */
@@ -289,5 +292,82 @@ footer p {
   /* Slimmed portfolio section for new container */
   #portfolio-section .items {
     width: 400px;
+  }
+}
+
+/* 640px */
+@media screen and (max-width: 640px) {
+  /* Header is now static and will scroll with other content */
+  header {
+    position: static;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  /* Removed the margins in the header so it's contents fill to teh screen edges */
+  header .container {
+    margin: 0;
+  }
+
+  /* Both parts of this flexbox now stack */
+  #navbar {
+    flex-direction: column;
+  }
+
+  /* Centered h1 and gave it bottom margin to space out the nav buttons */
+  #navbar h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* Changed justify-content from space-between to center eliminating extra spacing and added margin for centering */
+  #navbar ul {
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  /* Adjusted showcase containers to fit the new sizing and to be somewhat responsive */
+  #about-section,
+  #contact-section,
+  #portfolio-section {
+    margin: 20px auto 100px auto;
+    width: 92%;
+  }
+
+  /* Changed the img properties on the About page to show the image on top of the text */
+  #about-section img {
+    float: none;
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  /* Changed the grid layout and adjusted the width of the items and their contents to be more responsive */
+  #portfolio-section .items {
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+    width: 80%;
+  }
+
+  #portfolio-section .items .item {
+    width: 100%;
+  }
+
+  #portfolio-section .items .item .item-text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 5% 0;
+  }
+
+  #portfolio-section .items img {
+    width: 100%;
+  }
+
+  /* Footer now stays at the bottom of the page */
+  footer {
+    position: static;
   }
 }
