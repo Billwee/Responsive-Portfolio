@@ -230,6 +230,8 @@ footer p {
 /*  */
 /* Media Queries */
 /*  */
+
+/* 980px */
 @media screen and (max-width: 980px) {
   /* Fixed header for scrolling content */
   header {
