@@ -224,7 +224,7 @@ footer {
 }
 
 footer p {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 /*  */
@@ -251,6 +251,39 @@ footer p {
     margin-left: 42px;
     margin-bottom: 150px;
     margin-top: 110px;
+  }
+
+  /* Slimmed portfolio section for new container */
+  #portfolio-section .items {
+    width: 400px;
+  }
+}
+
+/* 768px */
+@media screen and (max-width: 768px) {
+  /* Fixed header for scrolling content */
+  header {
+    position: fixed;
+    top: 0;
+  }
+  /*L/R margin for Nav */
+  header .container {
+    margin: 0 40px;
+  }
+
+  /* Slimmed content and added margins for scrolling */
+  #about-section,
+  #contact-section,
+  #portfolio-section {
+    width: 680px;
+    margin-left: 42px;
+    margin-bottom: 150px;
+    margin-top: 110px;
+  }
+
+  /* About me img is slightly larger */
+  #about-section img {
+    width: 280px;
   }
 
   /* Slimmed portfolio section for new container */
