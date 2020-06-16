@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this assignment I implemented media queries into my first portfolio page. Images now stack and text boxes become smaller depending on the display size of the webpage.
+In this assignment, I implemented media queries into my first portfolio page. Images now stack and text boxes become smaller depending on the size of the display.
 
 ## Deployment
 
